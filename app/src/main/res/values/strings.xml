@@ -4,4 +4,7 @@
     <string name="music">Music</string>
     <string name="author">Author</string>
     <string name="save">SAVE</string>
+    <string name="url_image">Url Image</string>
+    <string name="load">LOAD</string>
+    <string name="load_image">LOAD IMAGE</string>
 </resources>

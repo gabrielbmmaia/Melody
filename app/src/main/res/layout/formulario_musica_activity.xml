@@ -28,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:hint="@string/music"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/formulario_musica_activity_imageview"
@@ -36,7 +37,7 @@
                 android:id="@+id/formulario_musica_EditText_campomusica"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/music" />
+                 />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
