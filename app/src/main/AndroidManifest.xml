@@ -16,6 +16,7 @@
         android:theme="@style/Theme.Melody"
         tools:targetApi="31">
 
+        <activity android:name=".ui.activity.FormularioMusicaActivity"/>
         <activity
             android:name="com.example.melody.ui.activity.ListaMusicaActivity"
             android:exported="true">

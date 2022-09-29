@@ -46,15 +46,12 @@ class ListaMusicaAdapter(
             imagemMusica.tryLoadImage(musica.imagemUrl)
             imagemMusica.visibility =
                 visibilidade(musica) // função para deixar a musica sem imagem caso nenhum seja adicionada
-
         }
-
         private fun visibilidade(musica: Musica) =
             if (musica.imagemUrl != null) {
                 View.VISIBLE
             } else {
                 View.GONE
             }
-
     }
 }
