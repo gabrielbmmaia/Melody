@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Melody</string>
+    <string name="new_song">New Song</string>
 </resources>
