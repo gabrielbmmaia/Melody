@@ -36,7 +36,7 @@ class ListaMusicaActivity : AppCompatActivity(R.layout.lista_musica_activity) {
     private fun createEfab() {
         val efab = binding.listaMusicaActivityEfab
         efab.setOnClickListener {
-            val intent = Intent(this, FomularioMusicaActivity::class.java)
+            val intent = Intent(this, FormularioMusicaActivity::class.java)
             startActivity(intent)
         }
     }

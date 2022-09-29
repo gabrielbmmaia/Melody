@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Melody</string>
     <string name="new_song">New Song</string>
+    <string name="music">Music</string>
+    <string name="author">Author</string>
+    <string name="save">SAVE</string>
 </resources>
