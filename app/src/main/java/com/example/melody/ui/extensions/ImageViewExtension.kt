@@ -7,7 +7,7 @@ import com.example.melody.R
 fun ImageView.tryLoadImage(url: String?) {
     load(url) {
         fallback(R.drawable.image_not_found)
-        error(R.drawable.image_not_found)
+        error(R.drawable.image_error)
         placeholder(R.drawable.image_not_found)
     }
 }

@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.melody.databinding.ExemploSomBinding
 import com.example.melody.ui.extensions.tryLoadImage
 import com.example.melody.ui.modelo.Musica
+import java.util.*
 
 class ListaMusicaAdapter(
     musicas: List<Musica>
@@ -44,8 +45,7 @@ class ListaMusicaAdapter(
             nomeMusica.text = musica.nomeMusica
             nomeAutor.text = musica.nomeAutor
             imagemMusica.tryLoadImage(musica.imagemUrl)
-            imagemMusica.visibility =
-                visibilidade(musica) // função para deixar a musica sem imagem caso nenhum seja adicionada
+            imagemMusica.visibility = visibilidade(musica) // função para deixar a musica sem imagem caso nenhum seja adicionada
         }
         private fun visibilidade(musica: Musica) =
             if (musica.imagemUrl != null) {
@@ -53,5 +53,9 @@ class ListaMusicaAdapter(
             } else {
                 View.GONE
             }
+    }
+
+    fun showList () : MutableList<Musica> {
+        return musicas
     }
 }

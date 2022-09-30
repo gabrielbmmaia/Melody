@@ -19,7 +19,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/image_not_found" />
+            app:srcCompat="@drawable/image_not_found" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/formulario_dialog_InputLayout_urlimage"
@@ -36,7 +36,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/formulario_dialog_EditText_urlimage"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:inputType="textUri"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
