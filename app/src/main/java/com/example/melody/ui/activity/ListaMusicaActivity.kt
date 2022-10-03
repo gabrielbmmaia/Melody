@@ -24,12 +24,12 @@ class ListaMusicaActivity : AppCompatActivity(R.layout.lista_musica_activity) {
         setContentView(binding.root)
         createRecyclerView()
         createEfab()
+        helper.attachToRecyclerView(binding.listaMusicaActivityRecyclerview)
     }
 
     override fun onResume() {
         super.onResume()
         adapter.refresh(dao.showAll())
-        helper.attachToRecyclerView(binding.listaMusicaActivityRecyclerview)
     }
 
     val helper = ItemTouchHelper(
@@ -50,13 +50,14 @@ class ListaMusicaActivity : AppCompatActivity(R.layout.lista_musica_activity) {
         ): Boolean {
             val from: Int = viewHolder.bindingAdapterPosition
             val to: Int = target.bindingAdapterPosition
-            Collections.swap(MusicaDao.musicas, from, to)
+            Collections.swap(dao.showAll(), from, to)
             adapter.notifyItemMoved(from, to)
             return true
         }
 
         override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
             adapter.showList().removeAt(viewHolder.bindingAdapterPosition)
+            dao.remove(viewHolder.bindingAdapterPosition)
             adapter.notifyItemRemoved(viewHolder.bindingAdapterPosition)
         }
     }
@@ -73,6 +74,4 @@ class ListaMusicaActivity : AppCompatActivity(R.layout.lista_musica_activity) {
             startActivity(intent)
         }
     }
-
 }
-
